@@ -12,27 +12,83 @@ public class BankAccount {
     /*
      * You may want to use this to distinguish between different kinds of accounts.
      */
+
     public enum BankAccountType {
         CHECKINGS,
         SAVINGS,
         STUDENT,
         WORKPLACE
     }
-
-    private int accountNumber;
-    public BankAccountType accountType;
-    private double accountBalance;
-    private String ownerName;
-    public double interestRate;
-    private double interestEarned;
-
-    public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
-    }
-
-    /*
-     * Implement getters and setters as appropriate for private variables.
+    /**
+     * balance
      */
+    private int accountNumber;
+    /**
+     * balance
+     */
+    private BankAccountType accountType;
+    /**
+     * balance
+     */
+    private double accountBalance;
+    /**
+     * balance
+     */
+    private String ownerName;
+    /**
+     * balance
+     */
+    private double interestRate;
+    /**
+     * balance
+     */
+    private double interestEarned;
+    /**
+     * @param name d.
+     * @param accountCategory d.
+     */
+    public BankAccount(final String name, final BankAccountType accountCategory) {
+        ownerName = name;
+        accountType = accountCategory;
+
+    }
+    /**
+     * getAccount Number
+     */
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+    /**
+     * getOwnerName
+     */
+    public String getOwnerName() {
+        return ownerName;
+    }
+    /**
+     * balance
+     */
+    public double getAccountBalance() {
+        return accountBalance;
+    }
+    /**
+     * balance
+     * @param setBalance d.
+     */
+    public void setAccountBalance(final double setBalance) {
+        this.accountBalance += setBalance;
+    }
+    /**
+     * set name
+     * @param setOwnerName d.
+     */
+    public void setOwnerName(final String setOwnerName) {
+        this.ownerName = setOwnerName;
+    }
+    /**
+     * set number
+     * @param setAccountNumber d.
+     */
+    public void setAccountNumber(final int setAccountNumber) {
+        this.accountNumber = setAccountNumber;
+    }
 }
